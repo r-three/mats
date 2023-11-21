@@ -1,0 +1,5 @@
+{
+    "train_template_idx": -2,
+    "train_instruction_format": "p3",
+    "train_max_examples_per_dataset_for_mixture": 500000
+}

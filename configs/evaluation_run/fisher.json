@@ -1,0 +1,4 @@
+{
+    "max_gen_len": 64,
+    "num_samples": -1
+}

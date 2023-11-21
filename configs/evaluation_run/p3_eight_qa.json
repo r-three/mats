@@ -1,0 +1,5 @@
+{
+    "dataset_mixture": "p3_eight_qa",
+    "max_gen_len": 64,
+    "num_samples": -1
+}

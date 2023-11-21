@@ -1,0 +1,13 @@
+{
+    "train_dataset_mixture": "p3_eight_qa",
+    "train_batch_size": 1024,
+    "num_batches": 10000,
+    "use_bfloat16_during_training": true,
+    "use_early_stopping": true,
+    "early_stopping_num_checkpoints_without_improvement": 5,
+    "should_save_every_checkpoint": true,
+    "optimizer": "adamw",
+    "lr": 1e-4,
+    "checkpoint_frequency": 100,
+    "seed": 42
+}

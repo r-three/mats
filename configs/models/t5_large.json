@@ -1,0 +1,4 @@
+{
+    "pretrained_model": "/fruitbasket/models/google/t5-large-lm-adapt",
+    "max_seq_len": 512
+}
