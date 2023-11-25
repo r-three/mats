@@ -46,9 +46,7 @@ def average(model_lambda, loaded_checkpoints):
         f"Taking the average of {len(checkpoints)} checkpoints with lambda {model_lambda}"
     )
 
-    # Assume model_lambda must be 1 unless we are scaling different checkpoints by different amounts, in which case we use lambda and (1 - lambda), which only holds for 2 checkpoints
-    if model_lambda != 1.0:
-        assert len(checkpoints) == 2
+    if len(checkpoints) == 2:
         scaled_checkpoints = [
             scale(checkpoints[0], model_lambda),
             scale(checkpoints[1], (1 - model_lambda)),
