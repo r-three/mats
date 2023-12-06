@@ -63,7 +63,7 @@ python src/training.py -c configs/models/t5_large.json configs/models/ia3.json c
 
 ## Merging
 
-All the examples below are for merging models that were trained on datasets from the `P3_eight_qa` dataset mixture. 
+All the examples below are for merging models that were trained on datasets from the `p3_eight_qa` dataset mixture. 
 
 The results will be saved in 
 ```
