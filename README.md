@@ -1,5 +1,5 @@
 # MMS
-This repository contains the official code for the paper: "Merging by Matching Models in their Task Subspace".
+This repository contains the official code for the paper: "Merging by Matching Models in Task Subspaces".
 
 ## Setup
 
