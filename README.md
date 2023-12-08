@@ -1,4 +1,4 @@
-# MMS
+# MaTS
 This repository contains the official code for the paper: "Merging by Matching Models in Task Subspaces".
 
 ## Setup
