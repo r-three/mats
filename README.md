@@ -259,7 +259,7 @@ python src/inference.py --merged_model exp_out/merging/p3/p3_eight_qa/google-t5-
 
 ## Checkpoints
 
-The models for `p3_eight_qa` can be found at this [google cloud storage bucket](https://console.cloud.google.com/storage/browser/merging_by_matching_models_in_their_task_subspace;tab=objects?forceOnBucketsSortingFiltering=true&hl=en&prefix=&forceOnObjectsSortingFiltering=false&authuser=0). 
+The models for `p3_eight_qa` can be found at this [google cloud storage bucket](https://console.cloud.google.com/storage/browser/merging_by_matching_models_in_task_subspaces;tab=objects?forceOnBucketsSortingFiltering=true&authuser=1&hl=en&project=craffel&prefix=&forceOnObjectsSortingFiltering=false). 
 This includes 
 - checkpoints for merging under `exp_out/p3`
 - multitask trained checkpoint under `exp_out/p3_eight_qa`
