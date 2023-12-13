@@ -1,5 +1,5 @@
 # MaTS
-This repository contains the official code for the paper: "Merging by Matching Models in Task Subspaces".
+This repository contains the official code for the paper: "[Merging by Matching Models in Task Subspaces](https://arxiv.org/abs/2312.04339)".
 
 ## Setup
 
@@ -266,3 +266,26 @@ This includes
 - merged models using various methods under `exp_out/merging`
 
 When downloading models, the directory structure should match the structure in the bucket, with `exp_out` under `mms`. 
+
+
+## Citation
+
+If you find this repo helpful, feel free to cite our work:
+
+```
+@article{tam2023merging,
+  title={Merging by Matching Models in Task Subspaces},
+  author={Tam, Derek and Bansal, Mohit and Raffel, Colin},
+  journal={arXiv preprint arXiv:2312.04339},
+  year={2023}
+}
+```
+and the following work whose code we use in our work: 
+```
+@article{yadav2023resolving,
+  title={Resolving Interference When Merging Models},
+  author={Yadav, Prateek and Tam, Derek and Choshen, Leshem and Raffel, Colin and Bansal, Mohit},
+  journal={arXiv preprint arXiv:2306.01708},
+  year={2023}
+}
+```
