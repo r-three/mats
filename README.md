@@ -1,6 +1,8 @@
 # MaTS
 This repository contains the official code for the paper: "[Merging by Matching Models in Task Subspaces](https://arxiv.org/abs/2312.04339)".
 
+If there are any issues, feel free to open a github issue and tag @dptam. 
+
 ## Setup
 
 1. Create a virtual environment and activate it.
