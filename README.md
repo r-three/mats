@@ -1,5 +1,5 @@
-# MMS
-This repository contains the official code for the paper: "Merging by Matching Models in Task Subspaces".
+# MaTS
+This repository contains the official code for the paper: "[Merging by Matching Models in Task Subspaces](https://arxiv.org/abs/2312.04339)".
 
 ## Setup
 
@@ -63,7 +63,7 @@ python src/training.py -c configs/models/t5_large.json configs/models/ia3.json c
 
 ## Merging
 
-All the examples below are for merging models that were trained on datasets from the `P3_eight_qa` dataset mixture. 
+All the examples below are for merging models that were trained on datasets from the `p3_eight_qa` dataset mixture. 
 
 The results will be saved in 
 ```
@@ -250,9 +250,42 @@ Run the `inference` script with
 `--merged_model` merged model to evaluate 
 
 ```
-python src/inference.py -e  exp_out/p3/quartz/facebook-opt-1.3b/full_model/2023-10-21-11-34-24 --checkpoint_idx 299  -ed split=train   -er eval_batch_size=32
+python src/inference.py -e exp_out/p3/cosmos_qa/google-t5-large-lm-adapt/2023-04-30-10-16-25 --checkpoint_idx 399  -ed split=train   -er eval_batch_size=32
 ```
 
 ```
 python src/inference.py --merged_model exp_out/merging/p3/p3_eight_qa/google-t5-large-lm-adapt/ia3/average/merged_model.pt -ed evaluation_split=test -i p3_eight_qa  -er eval_batch_size=32 
+```
+
+## Checkpoints
+
+The models for `p3_eight_qa` can be found at this [google cloud storage bucket](https://console.cloud.google.com/storage/browser/merging_by_matching_models_in_task_subspaces;tab=objects?forceOnBucketsSortingFiltering=true&authuser=1&hl=en&project=craffel&prefix=&forceOnObjectsSortingFiltering=false). 
+This includes 
+- checkpoints for merging under `exp_out/p3`
+- multitask trained checkpoint under `exp_out/p3_eight_qa`
+- merged models using various methods under `exp_out/merging`
+
+When downloading models, the directory structure should match the structure in the bucket, with `exp_out` under `mms`. 
+
+
+## Citation
+
+If you find this repo helpful, feel free to cite our work:
+
+```
+@article{tam2023merging,
+  title={Merging by Matching Models in Task Subspaces},
+  author={Tam, Derek and Bansal, Mohit and Raffel, Colin},
+  journal={arXiv preprint arXiv:2312.04339},
+  year={2023}
+}
+```
+and the following work whose code we use in our work: 
+```
+@article{yadav2023resolving,
+  title={Resolving Interference When Merging Models},
+  author={Yadav, Prateek and Tam, Derek and Choshen, Leshem and Raffel, Colin and Bansal, Mohit},
+  journal={arXiv preprint arXiv:2306.01708},
+  year={2023}
+}
 ```

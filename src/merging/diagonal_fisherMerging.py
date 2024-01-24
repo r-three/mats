@@ -43,10 +43,6 @@ def diagonal_fisherMerging(
     )
     start = time.time()
 
-    # Assume model_lambda must be 1 unless we are scaling different checkpoints by different amounts, in which case we use lambda and (1 - lambda), which only holds for 2 checkpoints
-    if model_lambda != 1.0:
-        assert len(loaded_checkpoints) == 2
-
     checkpoints_andFisherMatrices = {}
     for checkpoint_fp, checkpoint in loaded_checkpoints.items():
         dataset = getDataset_fromCheckpointFilepath(checkpoint_fp)
@@ -65,8 +61,8 @@ def diagonal_fisherMerging(
 
         fisher = set_minimum(fisher, 1e-8)
 
-        # Must scale checkpoint
-        if model_lambda != 1.0:
+        # Scale fishers
+        if len(loaded_checkpoints) == 2:
             if len(listOf_fishers) == 0:
                 fisher = scale(fisher, model_lambda)
 
