@@ -1,5 +1,5 @@
 # MMS
-This repository contains the official code for the paper: "Merging by Matching Models in their Task Subspace".
+This repository contains the official code for the paper: "Merging by Matching Models in Task Subspaces".
 
 ## Setup
 
@@ -256,13 +256,3 @@ python src/inference.py -e  exp_out/p3/quartz/facebook-opt-1.3b/full_model/2023-
 ```
 python src/inference.py --merged_model exp_out/merging/p3/p3_eight_qa/google-t5-large-lm-adapt/ia3/average/merged_model.pt -ed evaluation_split=test -i p3_eight_qa  -er eval_batch_size=32 
 ```
-
-## Checkpoints
-
-The models for `p3_eight_qa` can be found at this [google cloud storage bucket](https://console.cloud.google.com/storage/browser/merging_by_matching_models_in_their_task_subspace;tab=objects?forceOnBucketsSortingFiltering=true&hl=en&prefix=&forceOnObjectsSortingFiltering=false&authuser=0). 
-This includes 
-- checkpoints for merging under `exp_out/p3`
-- multitask trained checkpoint under `exp_out/p3_eight_qa`
-- merged models using various methods under `exp_out/merging`
-
-When downloading models, the directory structure should match the structure in the bucket, with `exp_out` under `mms`. 
