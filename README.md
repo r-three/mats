@@ -48,7 +48,7 @@ python src/training.py -c configs/models/t5_large.json configs/training_run/indi
 ```
 T5-Large for Multiple Tasks (`p3_eight_qa` dataset mixture)
 ```
-python src/training.py -c configs/models/t5_large.json configs/training_run/p3_eight_qa_T0_run.json  configs/training_dataset/p3_eight_qa.json configs/evaluation_dataset/p3_validation.json configs/evaluation_run/p3_eight_qa.json -tr micro_train_batch_size=16   -er eval_batch_size=32 
+python src/training.py -c configs/models/t5_large.json configs/training_run/p3_eight_qa_T0_run.json  configs/training_dataset/p3_multitask.json configs/evaluation_dataset/p3_validation.json configs/evaluation_run/p3_eight_qa.json -tr micro_train_batch_size=16   -er eval_batch_size=32 
 ```
 
 ### Parameter-Efficient Fine-tuning
@@ -60,7 +60,7 @@ python src/training.py -c configs/models/t5_large.json configs/models/ia3.json c
 
 $(IA)^3$   on Multiple Tasks (`p3_eight_qa` dataset mixture)
 ```
-python src/training.py -c configs/models/t5_large.json configs/models/ia3.json configs/training_run/p3_eight_qa_T0_run_ia3.json  configs/training_dataset/p3_eight_qa.json  configs/evaluation_dataset/p3_validation.json configs/evaluation_run/p3_eight_qa.json   -tr micro_train_batch_size=16   -er eval_batch_size=32 
+python src/training.py -c configs/models/t5_large.json configs/models/ia3.json configs/training_run/p3_eight_qa_T0_run_ia3.json  configs/training_dataset/p3_multitask.json  configs/evaluation_dataset/p3_validation.json configs/evaluation_run/p3_eight_qa.json   -tr micro_train_batch_size=16   -er eval_batch_size=32 
 ```
 
 ## Merging
